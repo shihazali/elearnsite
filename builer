@@ -7,7 +7,7 @@
 <!--<![endif]-->
 
 <head>
-	<title>eCourse</title>
+	<title> ProELearn</title>
 	<meta charset="utf-8">
 	<!--[if IE]>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -958,7 +958,7 @@
 										</div>
 										<div class="media-body greylinks">
 											<h5 class="media-heading grey">Email:</h5>
-											<a href="mailto:your@mail.com">support@ecourse.com</a>
+											<a href="mailto:your@mail.com">support@ ProELearn.com</a>
 										</div>
 									</div>
 								</li>
@@ -1006,7 +1006,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12 text-center">
-							<p>eCourse &copy; Copyright 2017. All Rights Reserved.</p>
+							<p> ProELearn &copy; Copyright 2017. All Rights Reserved.</p>
 						</div>
 					</div>
 				</div>
