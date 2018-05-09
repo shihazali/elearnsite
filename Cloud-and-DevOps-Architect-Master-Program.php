@@ -246,7 +246,7 @@
 
 									<div id="About" class="tabcontent" style="display: block;">
 									  <h5>About Course</h3>
-									  <p>Intellipaat’s Big Data Data Science masters program will provide you in-depth knowledge on designing, developing and deploying data science and Big data application in real world along with performance tuning of the application. This course will make you Big Data & Data Science Architect and by the end of the course you will have expertise on Hadoop Developer, Administration, testing and analysis Modules, working with real-time analytics, statistical computing, parsing machine-generated data, creating NoSQL applications and finally the domain of deep Learning in artificial intelligence. This program is specially designed by Industry experts and you will get 21 courses with 48 Industry based projects</p>
+									  <p>ProELearn’s Big Data Data Science masters program will provide you in-depth knowledge on designing, developing and deploying data science and Big data application in real world along with performance tuning of the application. This course will make you Big Data & Data Science Architect and by the end of the course you will have expertise on Hadoop Developer, Administration, testing and analysis Modules, working with real-time analytics, statistical computing, parsing machine-generated data, creating NoSQL applications and finally the domain of deep Learning in artificial intelligence. This program is specially designed by Industry experts and you will get 21 courses with 48 Industry based projects</p>
 									  <h5>List of courses included:</h5>
 									  <p>Online Instructor-Led Courses :
 										<ul>
@@ -312,10 +312,10 @@
 										<h3>FAQ</h3>
 										<div class="faq_container">
 											<div class="faq">
-												<div class="faq_question">What Is Intellipaat’s Combo Program And How It Is Different From Individual Courses?</div>
+												<div class="faq_question">What Is ProELearn’s Combo Program And How It Is Different From Individual Courses?</div>
 												<div class="faq_answer_container">
 													<div class="faq_answer">
-														<p>Intellipaat’s Combo program is a structured learning path specially designed by industry experts and ensures that you transform into Big Data Data Science expert. Individual courses at Intellipaat focus on one or two specializations. However, if you have to masters Big Data Data Science then this program is for you
+														<p>ProELearn’s Combo program is a structured learning path specially designed by industry experts and ensures that you transform into Big Data Data Science expert. Individual courses at ProELearn focus on one or two specializations. However, if you have to masters Big Data Data Science then this program is for you
 														</p>
 													</div>
 												</div>        
@@ -323,11 +323,11 @@
 										</div>
 										<div class="faq_container">
 											<div class="faq">
-												<div class="faq_question">Why Should I Learn Big Data Data Science From Intellipaat?</div>
+												<div class="faq_question">Why Should I Learn Big Data Data Science From ProELearn?</div>
 													<div class="faq_answer_container">
 													  <div class="faq_answer">
 													  <p>
-														Intellipaat is the pioneer of Big Data Data Science training we provide:
+														ProELearn is the pioneer of Big Data Data Science training we provide:
 														<ul><li>
 														Project work & Assignment – You will work on 48+ industry based project which will give you hands on experience on the technology
 														</li>
@@ -351,11 +351,11 @@
 										 </div>
 										 <div class="faq_container">
 											<div class="faq">
-												<div class="faq_question">What Are The Various Modes Of Training That Intellipaat Offers?</div>
+												<div class="faq_question">What Are The Various Modes Of Training That ProELearn Offers?</div>
 													<div class="faq_answer_container">
 													  <div class="faq_answer">
 													  <p>
-														Intellipaat offers the self-paced training and online instructor-led training.
+														ProELearn offers the self-paced training and online instructor-led training.
 													  </p><p>
 														Hadoop developer, Hadoop admin, Hadoop analyst, Hadoop testing, Spark & Scala, Apache Storm, Data Science with R, Data Science with SAS, Splunk, Deep learning are online instructor-led courses
 														</p><p>
@@ -373,7 +373,7 @@
 													<div class="faq_answer_container">
 													  <div class="faq_answer">
 													  <p>
-														If you have any queries you can contact our 24/7 dedicated support to raise a ticket. We provide you email support and solution to your queries. If the query is not resolved by email we can arrange for a one-on-one session with our trainers. The best part is that you can contact Intellipaat even after completion of training to get support and assistance. There is also no limit on the number of queries you can raise when it comes to doubt clearance and query resolution.
+														If you have any queries you can contact our 24/7 dedicated support to raise a ticket. We provide you email support and solution to your queries. If the query is not resolved by email we can arrange for a one-on-one session with our trainers. The best part is that you can contact ProELearn even after completion of training to get support and assistance. There is also no limit on the number of queries you can raise when it comes to doubt clearance and query resolution.
 													  </p>
 													  </div>
 												   </div>        
@@ -401,7 +401,7 @@
 													<div class="faq_answer_container">
 													  <div class="faq_answer">
 													  <p>
-														Yes, Intellipaat does provide you with placement assistance. We have tie-ups with 80+ organizations including Ericsson, Cisco, Cognizant, TCS, among others that are looking for Hadoop professionals and we would be happy to assist you with the process of preparing yourself for the interview and the job
+														Yes, ProELearn does provide you with placement assistance. We have tie-ups with 80+ organizations including Ericsson, Cisco, Cognizant, TCS, among others that are looking for Hadoop professionals and we would be happy to assist you with the process of preparing yourself for the interview and the job
 													  </p>
 													  </div>
 												   </div>        
@@ -413,7 +413,7 @@
 													<div class="faq_answer_container">
 													  <div class="faq_answer">
 													  <p>
-														Upon successful completion of training you have to take a set of quizzes, complete the projects and upon review and on scoring over 60% marks in the qualifying quiz the official Intellipaat verified certificate is awarded.The Intellipaat Certification is a seal of approval and is highly recognized in 80+ corporations around the world including many in the Fortune 500 list of companies.
+														Upon successful completion of training you have to take a set of quizzes, complete the projects and upon review and on scoring over 60% marks in the qualifying quiz the official ProELearn verified certificate is awarded.The ProELearn Certification is a seal of approval and is highly recognized in 80+ corporations around the world including many in the Fortune 500 list of companies.
 													  </p>
 													  </div>
 												   </div>        
@@ -466,7 +466,7 @@
 										</p><p>
 										At the end of this training program there will be quizzes that perfectly reflect the type of questions asked in the respective certification exams and helps you score better marks in certification exam.
 										</p><p>
-										Intellipaat Course Completion certificate will be awarded on the completion of Project work (on expert review) and upon scoring of at least 60% marks in the quiz. Intellipaat certification is well recognized in top 80+ MNCs like Ericsson, Cisco, Cognizant, Sony, Mu Sigma, Saint-Gobain, Standard Chartered, TCS, Genpact, Hexaware, etc.</p>
+										ProELearn Course Completion certificate will be awarded on the completion of Project work (on expert review) and upon scoring of at least 60% marks in the quiz. ProELearn certification is well recognized in top 80+ MNCs like Ericsson, Cisco, Cognizant, Sony, Mu Sigma, Saint-Gobain, Standard Chartered, TCS, Genpact, Hexaware, etc.</p>
 									</div>
 									
 									
@@ -589,7 +589,7 @@
 	For Company
 </li>
 								<li class="footer-link">
-									<a href="contact-us.html">Contact Us</a>
+									<a href="contact4.html">Contact Us</a>
 								</li>
 								<li class="footer-link">
 									<a href="about-us.html">About Us
