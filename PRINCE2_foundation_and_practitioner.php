@@ -489,7 +489,7 @@
 								
 									 <?php
 										$processQuery = new ProcessQuery();
-										$data = $processQuery->selectWhere('course_table', 'C001');
+										$data = $processQuery->selectWhere('course_table', 'C023');
 										$rows = array();
                                         while($row = mysql_fetch_array($data))
                                             $rows[] = $row;
