@@ -24,6 +24,12 @@
 	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
 	<link rel="stylesheet" href="css/shop.css">
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	    <script>
+        function enrol(id)
+        {
+            window.location.href = "reg_form.php?id=" + id;
+        }
+    </script>
 
 	<!--[if lt IE 9]>
 		<script src="js/vendor/html5shiv.min.js"></script>
@@ -485,39 +491,32 @@
 							<div class="widget widget_categories">
 
 								<h3 class="widget-title">Courses Date</h3>
-								<ol class="greylinks list3 text-uppercase greylinks bold">
+								
 								
 									 <?php
-									 
 										$processQuery = new ProcessQuery();
-										$data = $processQuery->selectWhere('course_table', 'C001');
 										$rows = array();
-                                        while($row = mysql_fetch_array($data))
-                                            $rows[] = $row;
+										$rows = $processQuery->selectWhere('course_table', 'C001');
+										    
                                         foreach($rows as $row){ 
                                             $date = stripslashes($row['course_date']);
                                             $id = stripslashes($row['course_id']);
                                             
                                             ?>
-                                            <li>
+                                            <div style=" border: 0.25px solid #29b5ee;">
+                                            <div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
         										<label class="content-justify">
         											<?php echo $date; ?>
                             					</label>
-                            					<a type="submit" id="enroll" name="enroll" class="theme_button color1" style="height: 43px; padding-top: 12px; color: #fff;" onclick="enrol(<?php echo $id; ?>);">Enroll Now</a>
-        									</li>
+                            					</div>
+                            					    <div class="col-lg-8" style="margin-top: 8px !important; margin-bottom: 3px !important;">
+                            					<a type="submit" id="enroll" name="enroll" class="theme_button color1" style="height: 30px; padding-top: 7px; color: #fff;" onclick="enrol(<?php echo $id; ?>);">Enroll Now</a>
+                            					</div>
+                            					</div>
+                            					<div class="clearfix"></div>
                              <?php           }
 										
 									?>
-								</ol>
-							</div>
-
-							<div class="widget widget_categories">
-
-								<h3 class="widget-title">Course Progress</h3>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" data-transitiongoal="50">
-									</div>
-								</div>
 							</div>
 
 							<div class="widget widget_search">

@@ -55,10 +55,14 @@ function selectWhere($tableName,$value)   {
     // else if($valueType == 'char')   {
         // $this -> sqlQuery .= "'".$value."'";
     // }
+    
+    $rows = array();
     $this -> dataSet = mysql_query($this -> sqlQuery,$this -> connectionString);
+    while($row = mysql_fetch_array($this -> dataSet))
+         $rows[] = $row;
     $this -> sqlQuery = NULL;
     $this -> dbDisconnect();
-    return $this -> dataSet;
+    return $rows;
     #return $this -> sqlQuery;
 
 }
