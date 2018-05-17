@@ -28,6 +28,7 @@ function dbConnect()    {
     $this -> Mysql();
     $this -> connectionString = mysql_connect($this -> serverName,$this -> userName,$this -> passCode);
     mysql_select_db($this -> databaseName,$this -> connectionString);
+    
 }
 
 function dbDisconnect() {
@@ -68,11 +69,27 @@ function selectWhere($tableName,$value)   {
 }
 
  function insertInto($tableName,$values) {
+     $this -> dbConnect();
     $i = NULL;
 
-    $this -> sqlQuery = 'INSERT INTO '.$tableName.' VALUES (';
+    $this -> sqlQuery = 'INSERT INTO '.$tableName.' (';
+    
     $i = 0;
     while($values[$i]["val"] != NULL && $values[$i]["type"] != NULL)    {
+        
+            $this -> sqlQuery .= $values[$i]["col"];
+        
+        $i++;
+        if($values[$i]["val"] != NULL)  {
+            $this -> sqlQuery .= ',';
+        }
+    }
+    
+    $this -> sqlQuery .= ') VALUES (';
+    $i = 0;
+    
+    while($values[$i]["val"] != NULL && $values[$i]["type"] != NULL)    {
+        
         if($values[$i]["type"] == "char")   {
             $this -> sqlQuery .= "'";
             $this -> sqlQuery .= $values[$i]["val"];
@@ -86,10 +103,12 @@ function selectWhere($tableName,$value)   {
             $this -> sqlQuery .= ',';
         }
     }
+    
     $this -> sqlQuery .= ')';
             #echo $this -> sqlQuery;
+           
     mysql_query($this -> sqlQuery,$this ->connectionString);
-            return $this -> sqlQuery;
+
     #$this -> sqlQuery = NULL;
 }
 

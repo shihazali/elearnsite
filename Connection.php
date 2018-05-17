@@ -7,9 +7,9 @@ class Connection{
 
     function Connection() {
         $this -> serverName = 'localhost';
-        $this -> userName = "a2zcerti_website";
+        $this -> userName = "proelear_website";
         $this -> passCode = "Silvextech@#_123";
-        $this -> dbName = "a2zcerti_website_data";
+        $this -> dbName = "proelear_wesite_database";
     }
 }
 ?>

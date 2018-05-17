@@ -233,11 +233,20 @@
 
 								<div class="col-sm-6">
 									<div class="form-group">
-										<label for="name">Full Name
+										<label for="name">First Name
 											<span class="required">*</span>
 										</label>
 										<i class="fa fa-user highlight" aria-hidden="true"></i>
-										<input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Full Name">
+										<input type="text" aria-required="true" size="30" value="" name="fname" id="fname" class="form-control" placeholder="First Name">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="name">Last Name
+											<span class="required">*</span>
+										</label>
+										<i class="fa fa-user highlight" aria-hidden="true"></i>
+										<input type="text" aria-required="true" size="30" value="" name="lname" id="lname" class="form-control" placeholder="Last Name">
 									</div>
 								</div>
 								<div class="col-sm-6">
@@ -256,6 +265,21 @@
 										</label>
 										<i class="fa fa-envelope highlight" aria-hidden="true"></i>
 										<input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Email Address">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="email">Postal address (Optional)
+											
+										</label>
+										<i class="fa fa-envelope highlight" aria-hidden="true"></i>
+										<input type="text" aria-required="false" size="30" value="" name="address" id="address" class="form-control" placeholder="Postal Address">
+									</div>
+								</div>
+								
+								<div class="col-sm-6" style="display: none;">
+									<div class="form-group">
+										<input type="text" aria-required="false" size="30" value="<?php echo $get['id']; ?>" name="course_id" id="course_id" class="form-control" placeholder="course_id">
 									</div>
 								</div>
 								

@@ -1,22 +1,24 @@
+<?php include("ProcessQuery.php"); ?>
 <?php 
 //////////////////////////
 //Specify default values//
 //////////////////////////
 
 //Your E-mail
-$your_email = 'shadab.arif@silvextech.com';
+$your_email = 'pay@proelearn.com';
+$your_email = 'support@proelearn.com';
 
 //Default Subject if 'subject' field not specified
-$default_subject = 'From My Contact Form';
+$default_subject = 'New registration came';
 
 //Message if 'name' field not specified
 $name_not_specified = 'Please type a valid name';
 
 //Message if e-mail sent successfully
-$email_was_sent = 'Thanks, your message successfully sent';
+$email_was_sent = 'Thanks for the registration. You will recieve confirmation mail by our team after review.';
 
 //Message if e-mail not sent (server not configured)
-$server_not_configured = 'Sorry, mail server not configured (function "mail()" disabled on your server?)';
+$server_not_configured = 'Sorry, can\'t send the mail right now try again later.';
 
 
 ///////////////////////////
@@ -27,21 +29,31 @@ $errors = array();
 //"name" field required by this PHP script even if 
 // there are no 'aria-required="true"' or 'required' 
 // attributes on this HTML input field
-if(isset($_POST['name'])) {
+if(isset($_POST['fname'])) {
     
-	if(!empty($_POST['name']))
-		$sender_name  = stripslashes(strip_tags(trim($_POST['name'])));
+	if(!empty($_POST['fname']))
+		$first_name  = stripslashes(strip_tags(trim($_POST['fname'])));
 	
+	if(!empty($_POST['lname']))
+		$last_name  = stripslashes(strip_tags(trim($_POST['lname'])));
+		
 	if(!empty($_POST['phone']))
 		$phone      = stripslashes(strip_tags(trim($_POST['phone'])));
 	
 	if(!empty($_POST['email']))
 		$sender_email = stripslashes(strip_tags(trim($_POST['email'])));
+		
+	if(!empty($_POST['address']))
+		$address = stripslashes(strip_tags(trim($_POST['address'])));
+		
+		
+	if(!empty($_POST['course_id']))
+		$course_id = stripslashes(strip_tags(trim($_POST['course_id'])));
 			
-	$message = "New registration has came from ".$sender_name." email id ".$sender_email.". Please, follow up the lead.";
+	$message = "New registration has came from ".$first_name." email id ".$sender_email.". Please, follow up the lead.";
 	
 	//Message if no sender name was specified
-	if(empty($sender_name)) {
+	if(empty($first_name)) {
 		$errors[] = $name_not_specified;
 	}
 
@@ -57,14 +69,14 @@ if(isset($_POST['name'])) {
 		//duplicating email meta (from and subject) to email message body
 		$message_meta = '';
 			//From name and email
-		$message_meta .= 'From: '. $sender_name . ' ' . $sender_email . "<br>";
+		$message_meta .= 'From: '. $first_name.' '. $last_name . ' ' . $sender_email . "<br>";
 			//Subject or default subject
 		$message_meta .= 'Subject: '. ( $subject ? $subject : $default_subject ) . "<br>";
 
 		//adding another CUSTOM contact form fields that added by user to email message body
 		foreach ($_POST as $key => $value) {
 			//checking for standard fields 
-			if ($key == 'name' || $key == 'phone' || $key == 'email'  ) {
+			if ($key == 'fname' || $key == 'phone' || $key == 'email'  ) {
 				continue;
 			}
 			//adding key-value pare to email message body
@@ -75,6 +87,38 @@ if(isset($_POST['name'])) {
 		$message = wordwrap($message, 70);
 	
 		if (mail($your_email, $subject, $message, $from)) {
+		    
+		    $processQuery = new ProcessQuery();
+		    $values[][] = array();
+		    
+		    $values[0]['col']='f_name';
+		    $values[0]['val']=$first_name;
+		    $values[0]['type']='char';
+		    
+		    $values[1]['col']='l_name';
+		    $values[1]['val']=$last_name;
+		    $values[1]['type']='char';
+		    
+		    $values[2]['col']='phone';
+		    $values[2]['val']=$phone;
+		    $values[2]['type']='char';
+		    
+		    $values[3]['col']='email';
+		    $values[3]['val']=$sender_email;
+		    $values[3]['type']='char';
+		    
+		    $values[4]['col']='address';
+		    $values[4]['val']=$address;
+		    $values[4]['type']='char';
+		    
+		    $values[5]['col']='course_id';
+		    $values[5]['val']=$course_id;
+		    $values[5]['type']='int';
+		    
+		    
+		    
+		    $processQuery->insertInto('registration', $values);
+		    
 			echo $email_was_sent;
 		} else {
 			$errors[] = $server_not_configured;
