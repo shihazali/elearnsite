@@ -107,6 +107,18 @@
 											<ul style="margin-top: 5px; display: none;">
 
 												<li>
+													<a href="project-management.html">Project Management</a>
+												</li>
+
+												<li>
+													<a href="it-services-and-architecture.html">IT Service and Architecture</a>
+												</li>
+												
+												<li>
+													<a href="quality-management.html">Quality Management</a>
+												</li>
+
+												<li>
 													<a href="big-data.html">Big Data</a>
 													
 												</li>
@@ -121,24 +133,17 @@
 												</li>
 
 												<li>
-													<a href="digital-marketing.html">Digital Marketing</a>
+													<a href="agile-scrum.html">Agile and Scrum</a>
 												</li>
-												
+
 												<li>
-													<a href="project-management.html">Project Management</a>
+													<a href="digital-marketing.html">Digital Marketing</a>
 												</li>
 												
 												<li>
 													<a href="cyber-security.html">Cyber Security</a>
 												</li>
 												
-												<li>
-													<a href="it-services-and-architecture.html">IT Service and Architecture</a>
-												</li>
-
-												<li>
-													<a href="quality-management.html">Quality Management</a>
-												</li>
 											</ul>
 										</li>
 										<!-- eof courses -->
