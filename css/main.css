@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,900|Poppins:500,600,700|Oswald:400,700");
 /**
@@ -14825,4 +14825,13 @@ li.footer-header {
 img.popular-course {
     max-height: 177px;
     min-height: 177px;
+}
+
+h3.widget-title{
+    margin-left: 10px;
+    margin-top: 9px;
+}
+
+.widget.widget_categories{
+    border: 3px solid #29b5ee;
 }
