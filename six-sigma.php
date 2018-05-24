@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
 	<link rel="stylesheet" href="css/shop.css">
+	<script language="JavaScript" type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	<script src="js/tab.js"></script>
 	<script>
@@ -35,6 +36,7 @@
 		<script src="js/vendor/html5shiv.min.js"></script>
 		<script src="js/vendor/respond.min.js"></script>
 		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+		
 	<![endif]-->
 
 </head>
