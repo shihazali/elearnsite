@@ -525,31 +525,6 @@
 									?>
 								</ol>
 							</div>
-
-							<div class="widget widget_categories">
-
-								<h3 class="widget-title">Course Progress</h3>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" data-transitiongoal="50">
-									</div>
-								</div>
-							</div>
-
-							<div class="widget widget_search">
-								<h3 class="widget-title">Search</h3>
-								<form method="get" class="searchform" action="./">
-
-									<div class="form-group">
-										<label class="sr-only" for="widget-search">Search for:</label>
-										<i class="flaticon-magnifying-glass"></i>
-										<input id="widget-search" type="text" value="" name="search" class="form-control" placeholder="Search Keyword">
-									</div>
-									<button type="submit" class="theme_button color1 no_bg_button">Search</button>
-
-								</form>
-							</div>
-
-
 						</aside>
 						<!-- eof aside sidebar -->
 
