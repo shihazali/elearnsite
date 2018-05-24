@@ -494,21 +494,25 @@
 								
 									 <?php
 										$processQuery = new ProcessQuery();
-										$data = $processQuery->selectWhere('course_table', 'C035');
 										$rows = array();
-                                        while($row = mysql_fetch_array($data))
-                                            $rows[] = $row;
+										$rows = $processQuery->selectWhere('course_table', 'C035');
+										    
                                         foreach($rows as $row){ 
                                             $date = stripslashes($row['course_date']);
                                             $id = stripslashes($row['course_id']);
                                             
                                             ?>
-                                            <li>
+                                            <div style=" border: 0.25px solid #29b5ee;">
+                                            <div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
         										<label class="content-justify">
         											<?php echo $date; ?>
                             					</label>
-                            					<a type="submit" id="enroll" name="enroll" class="theme_button color1" style="height: 43px; padding-top: 12px; color: #fff;" onclick="enrol(<?php echo $id; ?>);">Enroll Now</a>
-        									</li>
+                            					</div>
+                            					    <div class="col-lg-8" style="margin-top: 8px !important; margin-bottom: 3px !important;">
+                            					<a type="submit" id="enroll" name="enroll" class="theme_button color1" style="height: 30px; padding-top: 7px; color: #fff;" onclick="enrol(<?php echo $id; ?>);">Enroll Now</a>
+                            					</div>
+                            					</div>
+                            					<div class="clearfix"></div>
                              <?php           }
 										
 									?>
