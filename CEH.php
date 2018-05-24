@@ -24,6 +24,7 @@ include("ProcessQuery.php"); ?>
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
 	<link rel="stylesheet" href="css/shop.css">
+	<script language="JavaScript" type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	<script src="js/tab.js"></script>
 	<script>
