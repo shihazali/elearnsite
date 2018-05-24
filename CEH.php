@@ -25,7 +25,13 @@ include("ProcessQuery.php"); ?>
 	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
 	<link rel="stylesheet" href="css/shop.css">
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-
+	<script src="js/tab.js"></script>
+	<script>
+        function enrol(id)
+        {
+            window.location.href = "reg_form.php?id=" + id;
+        }
+    </script>
 	<!--[if lt IE 9]>
 		<script src="js/vendor/html5shiv.min.js"></script>
 		<script src="js/vendor/respond.min.js"></script>
@@ -506,18 +512,7 @@ include("ProcessQuery.php"); ?>
                                             <div style=" border: 0.25px solid #29b5ee;">
                                             <div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
         										<label class="content-justify">
-        											<?
-													
-													
-													
-													
-													
-													
-													
-													
-													
-													
-													echo $date; ?>
+        											<?php echo $date; ?>
                             					</label>
                             					</div>
                             					    <div class="col-lg-8" style="margin-top: 8px !important; margin-bottom: 3px !important;">

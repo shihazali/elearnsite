@@ -30,7 +30,7 @@
             window.location.href = "reg_form.php?id=" + id;
         }
     </script>
-
+	<script src="js/tab.js"></script>
 	<!--[if lt IE 9]>
 		<script src="js/vendor/html5shiv.min.js"></script>
 		<script src="js/vendor/respond.min.js"></script>
