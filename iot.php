@@ -506,17 +506,15 @@
 										    
                                         foreach($rows as $row){ 
                                             $date = stripslashes($row['course_date']);
+											$edate = stripslashes($row['course_end_date']);
                                             $id = stripslashes($row['course_id']);
                                             
                                             ?>
                                             <div style=" border: 0.25px solid #29b5ee;">
                                             <div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
         										<label class="content-justify">
-        											<?
-													
-													
-													
-													echo $date; ?>
+        											<?echo $date; ?> to <?
+													echo $edate; ?>
                             					</label>
                             					</div>
                             					    <div class="col-lg-8" style="margin-top: 8px !important; margin-bottom: 3px !important;">
