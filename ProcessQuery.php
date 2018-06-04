@@ -47,6 +47,22 @@ function selectAll($tableName)  {
             return $this -> dataSet;
 }
 
+function selectCourse($value)   {
+    $this -> dbConnect();
+    $this -> sqlQuery = "SELECT * FROM course_table WHERE course_id = '".$value."'";
+    
+    $rows = array();
+    $this -> dataSet = mysql_query($this -> sqlQuery,$this -> connectionString);
+    while($row = mysql_fetch_array($this -> dataSet))
+         $rows[] = $row;
+    $this -> sqlQuery = NULL;
+    $this -> dbDisconnect();
+    return $rows;
+    #return $this -> sqlQuery;
+
+}
+
+
 function selectWhere($tableName,$value)   {
     $this -> dbConnect();
     $this -> sqlQuery = "SELECT * FROM ".$tableName." WHERE course_uid = '".$value."'";

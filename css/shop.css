@@ -523,11 +523,9 @@ h1.product_title {
 .quantity [type="button"] {
 	position: relative;
 	line-height: 1;
-	color: transparent;
 	border: none;
 	width: 22px;
 	height: 24px;
-	background-color: transparent;
 	z-index: 1;
 }
 

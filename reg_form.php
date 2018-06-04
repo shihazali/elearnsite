@@ -25,6 +25,18 @@
 	<link rel="stylesheet" href="css/shop.css">
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
+	<script>
+	$( document ).ready(function() {
+
+	$( ".qty" ).change(function() {
+	var quanty = $('input[name="product_quantity"]').val();
+	var fee = $('label[name="fee"]').text();
+	$('label[name="total"]').text(fee * quanty);
+	});
+	
+	});
+	</script>
+
 	<!--[if lt IE 9]>
 		<script src="js/vendor/html5shiv.min.js"></script>
 		<script src="js/vendor/respond.min.js"></script>
@@ -231,7 +243,7 @@
 					</div>
 					<div class="row">
 
-						<div class="col-md-8 to_animate" data-animation="scaleAppear">
+						<div class="col-md-7 to_animate" data-animation="scaleAppear">
 
 							<form class="contact-form columns_padding_5" method="post" action="./">
 
@@ -278,7 +290,7 @@
 											
 										</label>
 										<i class="fa fa-envelope highlight" aria-hidden="true"></i>
-										<input type="text" aria-required="false" size="30" value="" name="address" id="address" class="form-control" placeholder="Postal Address">
+										<input type="text" aria-required="false" size="30" value="" name="address" id="address" class="qty form-control" placeholder="Postal Address (Optional)">
 									</div>
 								</div>
 								
@@ -298,7 +310,63 @@
 
 							</form>
 						</div>
+						<div class="col-sm-4 col-md-5 col-lg-5">
 
+							<div class="table-responsive">
+								<table class="table shop_table cart cart-table">
+									<thead>
+										<tr>
+											<td class="product-info">Product</td>
+											<td class="product-price-td">Price</td>
+											<td class="product-quantity">Quantity</td>
+											<td class="product-subtotal">Subtotal</td>
+										</tr>
+									</thead>
+									<tbody>
+									<?php
+										$processQuery = new ProcessQuery();
+										$rows = array();
+										$id = $get['id'];
+										$rows = $processQuery->selectCourse($id);
+										    
+                                        foreach($rows as $row){ 
+                                            $date = stripslashes($row['course_date']);
+											$edate = stripslashes($row['course_end_date']);
+                                            $name = stripslashes($row['course_name']);
+											$fee = stripslashes($row['course_fee']);
+
+                                            ?>
+										<tr class="cart_item">
+											<td class="product-info">
+												<div class="media">
+													<div class="media-body">
+														<h4 class="media-heading">
+															<a href="shop-product-right.html"><?php echo $name; ?></a>
+														</h4>
+													</div>
+												</div>
+											</td>
+											<td class="product-price">
+												<span class="currencies">$</span>
+												<span class="amount"><label name="fee"><?php echo $fee; ?></label></span>
+											</td>
+											<td class="product-quantity">
+												<div class="quantity">
+													<input name="product_quantity" title="Qty" class="form-control" type="number" min="0" step="1" value="1" onfocusout="totalcalculate()">
+												</div>
+											</td>
+											<td class="product-subtotal">
+												<span class="currencies">$</span>
+												<span class="amount"><label name="total"></label></span>
+											</td>
+											
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+
+						</div>
 					</div>
 				</div>
 			</section>
