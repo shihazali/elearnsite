@@ -238,7 +238,7 @@
 
 					<div class="row">
 
-						<div class="col-sm-7 col-md-8 col-lg-7">
+						<div class="col-sm-12 col-md-12 col-lg-12">
 
 							<article>
 								<div class="entry-thumbnail item-media rounded  bottommargin_40">
@@ -249,6 +249,46 @@
 									</video>
 								</div>
 								
+								<div class="widget widget_categories">
+
+								<h3 class="widget-title">Courses Date</h3>
+								<ol class="greylinks list3 text-uppercase greylinks bold">
+								
+									  <?php
+										$processQuery = new ProcessQuery();
+										$rows = array();
+										$rows = $processQuery->selectWhere('course_table', 'C029');
+										    
+                                        foreach($rows as $row){ 
+                                            $date = stripslashes($row['course_date']);
+											$edate = stripslashes($row['course_end_date']);
+                                            $id = stripslashes($row['course_id']);
+                                            
+                                            ?>
+                                            <div style=" border: 0.25px solid #29b5ee;">
+                                            <div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
+        										<label class="content-justify">
+        											<?php
+													echo date("d-m-Y", strtotime($date)); ?>
+                            					</label>
+                            					</div>
+												<div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
+        										<label class="content-justify">
+        											<?php
+													echo date("d-m-Y", strtotime($edate)); ?>
+                            					</label>
+                            					</div>
+                            					    <div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
+                            					<a type="submit" id="enroll" name="enroll" class="theme_button color1" style="height: 21px; padding-top: 3px; font-size: 11px; padding-left: 3px; padding-right: 3px; color: #fff;" onclick="enrol(<?php echo $id; ?>);">Enroll Now</a>
+                            					</div>
+                            					</div>
+                            					<div class="clearfix"></div>
+                             <?php           }
+										
+									?>
+								</ol>
+							</div>
+
 								<div class="item-content">
 									<div class="tab">
 									  <button class="tablinks" onclick="openCity(event, 'About')">About Course</button>
@@ -491,50 +531,7 @@
 						</div>
 						<!--eof .col-sm-8 (main content)-->
 
-						<!-- sidebar -->
-						<aside class="col-sm-5 col-md-4 col-lg-5">
-
-							<div class="widget widget_categories">
-
-								<h3 class="widget-title">Courses Date</h3>
-								<ol class="greylinks list3 text-uppercase greylinks bold">
-								
-									  <?php
-										$processQuery = new ProcessQuery();
-										$rows = array();
-										$rows = $processQuery->selectWhere('course_table', 'C029');
-										    
-                                        foreach($rows as $row){ 
-                                            $date = stripslashes($row['course_date']);
-											$edate = stripslashes($row['course_end_date']);
-                                            $id = stripslashes($row['course_id']);
-                                            
-                                            ?>
-                                            <div style=" border: 0.25px solid #29b5ee;">
-                                            <div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
-        										<label class="content-justify">
-        											<?php
-													echo date("d-m-Y", strtotime($date)); ?>
-                            					</label> to 
-                            					</div>
-												<div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
-        										<label class="content-justify">
-        											<?php
-													echo date("d-m-Y", strtotime($edate)); ?>
-                            					</label>
-                            					</div>
-                            					    <div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
-                            					<a type="submit" id="enroll" name="enroll" class="theme_button color1" style="height: 21px; padding-top: 3px; font-size: 11px; padding-left: 3px; padding-right: 3px; color: #fff;" onclick="enrol(<?php echo $id; ?>);">Enroll Now</a>
-                            					</div>
-                            					</div>
-                            					<div class="clearfix"></div>
-                             <?php           }
-										
-									?>
-								</ol>
-							</div>
-						</aside>
-						<!-- eof aside sidebar -->
+					
 
 					</div>
 				</div>
