@@ -514,13 +514,13 @@
                                             <div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
         										<label class="content-justify">
         											<?php
-													echo $date; ?>
+													echo date("d-m-Y", strtotime($date)); ?>
                             					</label> to 
                             					</div>
 												<div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
         										<label class="content-justify">
         											<?php
-													echo $edate; ?>
+													echo date("d-m-Y", strtotime($edate)); ?>
                             					</label>
                             					</div>
                             					    <div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">

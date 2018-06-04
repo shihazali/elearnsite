@@ -510,17 +510,17 @@
                                             $id = stripslashes($row['course_id']);
                                             
                                             ?>
-                                            <div style=" border: 0.25px solid #29b5ee;">
+                                           <div style=" border: 0.25px solid #29b5ee;">
                                             <div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
         										<label class="content-justify">
         											<?php
-													echo $date; ?>
+													echo date("d-m-Y", strtotime($date)); ?>
                             					</label> to 
                             					</div>
 												<div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
         										<label class="content-justify">
         											<?php
-													echo $edate; ?>
+													echo date("d-m-Y", strtotime($edate)); ?>
                             					</label>
                             					</div>
                             					    <div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
