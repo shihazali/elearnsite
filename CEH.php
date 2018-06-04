@@ -3,8 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<?
-include("ProcessQuery.php"); ?>
+<?php include("ProcessQuery.php"); ?>
 <html class="no-js">
 <!--<![endif]-->
 
@@ -239,7 +238,7 @@ include("ProcessQuery.php"); ?>
 
 					<div class="row">
 
-						<div class="col-sm-7 col-md-8 col-lg-8">
+						<div class="col-sm-7 col-md-8 col-lg-7">
 
 							<article>
 								<div class="entry-thumbnail item-media rounded  bottommargin_40">
@@ -493,7 +492,7 @@ include("ProcessQuery.php"); ?>
 						<!--eof .col-sm-8 (main content)-->
 
 						<!-- sidebar -->
-						<aside class="col-sm-5 col-md-4 col-lg-4">
+						<aside class="col-sm-5 col-md-4 col-lg-5">
 
 							<div class="widget widget_categories">
 
@@ -514,14 +513,18 @@ include("ProcessQuery.php"); ?>
                                             <div style=" border: 0.25px solid #29b5ee;">
                                             <div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
         										<label class="content-justify">
-        											<?php echo $date; ?> to <?
-													echo $edate; ?>
+        											<?php
+													echo date("d-m-Y", strtotime($date)); ?>
+                            					</label> to 
+                            					</div>
+												<div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
+        										<label class="content-justify">
+        											<?php
+													echo date("d-m-Y", strtotime($edate)); ?>
                             					</label>
                             					</div>
-                            					    <div class="col-lg-8" style="margin-top: 8px !important; margin-bottom: 3px !important;">
-                            					<a type="submit" id="enroll" name="enroll" class="theme_button color1" style="height: 30px; padding-top: 7px; color: #fff;" onclick="enrol(<?
-												
-												echo $id; ?>);">Enroll Now</a>
+                            					    <div class="col-lg-4" style="margin-top: 8px !important; margin-bottom: 3px !important;">
+                            					<a type="submit" id="enroll" name="enroll" class="theme_button color1" style="height: 21px; padding-top: 3px; font-size: 11px; padding-left: 3px; padding-right: 3px; color: #fff;" onclick="enrol(<?php echo $id; ?>);">Enroll Now</a>
                             					</div>
                             					</div>
                             					<div class="clearfix"></div>
